@@ -14,3 +14,26 @@ Observação: Vestigios de uso de IA, atividade zerada,
 ou código copiado de terceiros sem a devida citação, serão penalizados.
 
 */
+
+using System.Security.Cryptography.X509Certificates;
+
+public static class Atv04
+{
+    public static void Executar()
+    {
+        int numero;
+        int multiplicador = 1;
+
+
+        Console.WriteLine("Digite o número desejado: ");
+        numero = int.Parse(Console.ReadLine()!);
+
+
+        while (multiplicador <= 10)
+        {
+            Console.WriteLine($"{numero} * {multiplicador} = {numero * multiplicador}");
+            multiplicador++;
+
+        }
+    }
+}

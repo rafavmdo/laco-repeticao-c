@@ -20,6 +20,24 @@ public static class Atv03
 {
     public static void Executar()
     {
+        Console.Clear();
+        string placaCarro;
+        int quantidadeCarros = 0;
+        string continuar;
 
+        Console.WriteLine("Gostaria de registrar alguma placa? s/n");
+        continuar = Console.ReadLine()!;
+
+        while (continuar == "s" || continuar == "S")
+        {
+            Console.Clear();
+            Console.WriteLine("Qual é a placa do carro? ");
+            placaCarro = Console.ReadLine()!;
+            quantidadeCarros++;
+            Console.WriteLine("Gostaria de registrar alguma placa? s/n");
+            continuar = Console.ReadLine()!;
+            Console.Clear();
+        }
+        Console.WriteLine($"Total de placas registradas: {quantidadeCarros}");
     }
 }

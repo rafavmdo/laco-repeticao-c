@@ -21,6 +21,8 @@ Observação: Vestigios de uso de IA, atividade zerada,
 ou código copiado de terceiros sem a devida citação, serão penalizados.
 
 */
+using System.Net.Http.Headers;
+
 public static class Atv02
 {
     public static void Executar()
@@ -53,6 +55,8 @@ public static class Atv02
 
         Console.WriteLine($"Quantidade de compras registradas: {quantidadeCompras}");
         Console.WriteLine($"Total arrecadado: R$ {totalArrecadado}");
+        Console.WriteLine($"Total media: R$ {totalArrecadado / quantidadeCompras}");
+
     }
 }
 

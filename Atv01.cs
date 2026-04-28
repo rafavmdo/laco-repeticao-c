@@ -28,6 +28,8 @@ desejar continuar.
 Observação: Vestigios de uso de IA, atividade zerada, 
 ou código copiado de terceiros sem a devida citação, serão penalizados.
 */
+using System.Security.Cryptography.X509Certificates;
+
 public static class Atv01
 {
     public static void Executar()
@@ -35,19 +37,19 @@ public static class Atv01
         double numero1;
         double numero2;
         double resultado = 0;
-        int opcao;
+        string opcao;
         string continuar = "s";
 
         while (continuar == "s" || continuar == "S")
         {
             Console.Clear();
             Console.WriteLine("=== CALCULADORA ===");
-            Console.WriteLine("1 - Soma");
-            Console.WriteLine("2 - Subtração");
-            Console.WriteLine("3 - Multiplicação");
-            Console.WriteLine("4 - Divisão");
+            Console.WriteLine("+ - Soma");
+            Console.WriteLine("- - Subtração");
+            Console.WriteLine("x - Multiplicação");
+            Console.WriteLine("/ - Divisão");
             Console.Write("Escolha uma opção: ");
-            opcao = int.Parse(Console.ReadLine()!);
+            opcao = Console.ReadLine();
 
             Console.Write("Digite o primeiro número: ");
             numero1 = double.Parse(Console.ReadLine()!);
@@ -55,22 +57,22 @@ public static class Atv01
             Console.Write("Digite o segundo número: ");
             numero2 = double.Parse(Console.ReadLine()!);
 
-            if (opcao == 1)
+            if (opcao == "+")
             {
                 resultado = numero1 + numero2;
                 Console.WriteLine($"Resultado da soma: {resultado}");
             }
-            else if (opcao == 2)
+            else if (opcao == "-")
             {
                 resultado = numero1 - numero2;
                 Console.WriteLine($"Resultado da subtração: {resultado}");
             }
-            else if (opcao == 3)
+            else if (opcao == "x")
             {
                 resultado = numero1 * numero2;
                 Console.WriteLine($"Resultado da multiplicação: {resultado}");
             }
-            else if (opcao == 4)
+            else if (opcao == "/")
             {
                 if (numero2 == 0)
                 {
